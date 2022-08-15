@@ -9,7 +9,7 @@ const SideBar = () => {
     return (
         <div className='side-bar'>
             <div className='logo'>
-                <h1>Naledi</h1>
+                <img src="./assets/logo.png" alt="" />
             </div>
 
             <div className='menu'>

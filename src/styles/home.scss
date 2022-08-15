@@ -11,6 +11,23 @@
     .content-section{
         flex: 82%;
         height: 99%;
+        justify-content: space-between;
         // border: 2px solid green;
+
+        .top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    .searchBar-section{
+        display: flex;
+        justify-content: center;
+        flex: 80%;
+    }
+
+    .avatar-section{
+        flex: 20%;
+        font-weight: bold;
     }
 }

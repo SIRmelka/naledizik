@@ -1,0 +1,27 @@
+.avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+    .circle-avatar{
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        padding: 3px;
+        margin: 10px 10px;
+        .avatar-picture{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            background-size: cover;
+        }
+
+    }
+    p{
+        font-size:15px;
+        margin: 0 5px;
+    }
+    span{
+        font-size: 20px;
+    }
+}
