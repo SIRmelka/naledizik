@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+    justify-content: space-between;
+    height: 99vh;
+
+    .sidebar-section{
+        flex: 18%;
+        height: 99%;
+        box-shadow: 2px 1px 10px #eee;
+    }
+    .content-section{
+        flex: 82%;
+        height: 99%;
+        // border: 2px solid green;
+    }
+}
