@@ -1,4 +1,5 @@
 import React from 'react';
+import PresentationBanner from '../components/PresentationBanner';
 import SearchBar from '../components/SearchBar';
 import SideBar from '../components/SideBar';
 import UserAvatar from '../components/UserAvatar';
@@ -11,12 +12,15 @@ const Home = () => {
             </div>
             <div className='content-section'>
                 <div className='top'>
-                <div className='searchBar-section'> 
-                    <SearchBar/>
+                    <div className='searchBar-section'> 
+                        <SearchBar/>
+                    </div>
+                    <div className='avatar-section'> 
+                        <UserAvatar/>
+                    </div>
                 </div>
-                <div className='avatar-section'> 
-                    <UserAvatar/>
-                </div>
+                <div className='middle'>
+                    <PresentationBanner/>
                 </div>
                 
             </div>
