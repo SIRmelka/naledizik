@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     height: 99vh;
-
+    overflow: auto;
+    background: #fafafa;
     .sidebar-section{
         flex: 18%;
         height: 99%;
@@ -30,7 +31,26 @@
         justify-content: space-around;
     }
     .middle{
-        // border: 2px solid red;
+        .playlists{
+            margin: 1em 3em;
 
+            .playlists-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                h1{
+                    font-size: 20px;
+                }
+                p{
+                
+                }
+            }
+            .playlists-body{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;               
+            }
+        }
     }
 }
