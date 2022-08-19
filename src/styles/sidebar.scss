@@ -1,13 +1,12 @@
 .side-bar{
-    position: fixed;
     background: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     // border: 2px solid red;
     margin: 5px 1px;
-    padding: 0 2em;
+    padding: 0 4em;
 
     .menu,.settings{
       ul{

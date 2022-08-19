@@ -1,0 +1,28 @@
+.music-tile{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 1em;
+    background: white;
+    margin:1em 0 ;
+    .left{
+        padding: 2px 10px;
+        flex: 90%;
+        p{
+            margin: 1px;
+        }
+        .title{
+            font-weight: bold;
+        }
+    }
+    .right{
+        display: flex;
+        align-self:center ;
+        justify-content: space-around;
+        flex: 10%;
+
+        .icon{
+            font-size: 37px;
+            margin-top: 3px
+        }
+    };
+}

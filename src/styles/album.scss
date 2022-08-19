@@ -1,0 +1,35 @@
+.album{
+    margin: 10px 10px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 3px 5px 5px 1px #eee;
+    .album-cover{
+
+        min-height: 300px;
+        min-width: 250px;
+        background: url("https://cdns-images.dzcdn.net/images/cover/43272c09cadc25664fc1e4dd7de6d96c/264x264.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .album-info{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        min-height: 30px;
+        width: 250px;
+        padding:5px 5px;
+
+        p{
+            margin: 0;
+        }
+        .album-title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .album-like-icon{
+            margin-top: 10px;
+            color:$secondary;
+            font-size: 30px;
+        }
+    }
+}

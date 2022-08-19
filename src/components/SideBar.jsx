@@ -4,6 +4,7 @@ import {GoSearch} from 'react-icons/go'
 import {TbPlaylist} from 'react-icons/tb'
 import {FaHeadphones} from 'react-icons/fa'
 import ThemeToggler from './ThemeToggler';
+import { NavLink } from 'react-router-dom';
 
 const SideBar = () => {
     return (
@@ -25,10 +26,11 @@ const SideBar = () => {
                         <span className="nav-element">Search</span>
                     </li>
 
-                    <li>
+                   <li>
                         <span className='nav-icon'><TbPlaylist/></span>
                         <span className="nav-element">Playlist</span>
                     </li>
+           
 
                     <li>
                         <span className='nav-icon'><FaHeadphones/></span> 

@@ -1,0 +1,19 @@
+.albums{
+    margin: 1em 3em;
+        .albums-header{
+            display: flex;
+            justify-content: space-between;
+           h1{
+            font-size: 20px;
+            }
+        }
+        .albums-body{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+           
+        }
+        
+        
+}

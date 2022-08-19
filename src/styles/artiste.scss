@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin: 2px 5px;
+    transition: 1s;
 
     .artist-name{
         background: rgba($color: #000000, $alpha: 0.7);
@@ -23,6 +24,8 @@
     }
 }
 .artiste:hover{
+    
+    transform: scale(1.06);
 
     .artist-name{
         opacity: 1;
