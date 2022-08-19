@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useContext } from 'react';
+import UserContext from '../context';
 import Album from './Album';
 
 const HomeAlbums = () => {
+
+    const {getData} = useContext(UserContext);
+
+    useEffect(()=>{
+
+        getData.getMySavedAlbums()
+        .then(data => console.log(data))
+    })
+
     return (
         <div className='albums'>
            <div className='albums-header'>

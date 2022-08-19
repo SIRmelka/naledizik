@@ -15,6 +15,7 @@ function App() {
   const [userId, setUserId] = useState("");
   const [userName, setUserName] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
+  
   const getData = new SpotifyWebApi();
 
   getData.setAccessToken(localStorage.getItem("token"));
