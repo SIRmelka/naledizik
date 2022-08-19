@@ -1,15 +1,16 @@
 import React from 'react';
 import {AiOutlineHeart} from 'react-icons/ai'
-const Album = () => {
+const Album = ({albumName,artist,background}) => {
     return (
         <div className="album">
-            <div className='album-cover'>
-
+            <div className='album-cover' 
+                style={{ backgroundImage:`url(${background})`}}
+            >
             </div>
             <div className='album-info'>
                 <span>
-                    <p className="album-title">Album</p>
-                    <p className="album-artist">Katty perry</p>
+                    <p className="album-title">{albumName}</p>
+                    <p className="album-artist">{artist}</p>
                 </span>
                 <span className="album-like-icon">
                     <AiOutlineHeart/>

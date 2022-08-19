@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import UserContext from '../context';
 import Album from './Album';
@@ -7,11 +8,14 @@ const HomeAlbums = () => {
 
     const {getData} = useContext(UserContext);
 
-    useEffect(()=>{
+    const [albums,setAlbums] = useState([]);
 
-        getData.getMySavedAlbums()
-        .then(data => console.log(data))
-    })
+    useEffect(()=>{
+        getData.getNewReleases({limit:12})
+        .then(data => setAlbums(data.albums.items))
+    },[])
+
+    console.log(albums);
 
     return (
         <div className='albums'>
@@ -20,14 +24,12 @@ const HomeAlbums = () => {
                 <p>see more</p>
             </div>
             <div className='albums-body'>
-                <Album/>
-                <Album/>
-                <Album/>
-                <Album/>
-                <Album/>
-                <Album/>
-                <Album/>
-                <Album/>
+                {
+                    albums.map((album)=>{
+                        return <Album key={album.id} albumName={album.name} artist={album.artists[0].name} background={album.images[0].url}/>
+                    })
+                }
+                
             </div>
         </div>
     );

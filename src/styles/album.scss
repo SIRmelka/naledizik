@@ -3,11 +3,12 @@
     background: #fff;
     padding: 10px;
     box-shadow: 3px 5px 5px 1px #eee;
+    flex: 10%;
+    transition: 0.3s;
     .album-cover{
 
         min-height: 300px;
-        min-width: 250px;
-        background: url("https://cdns-images.dzcdn.net/images/cover/43272c09cadc25664fc1e4dd7de6d96c/264x264.jpg");
+        min-width: 200px;
         background-position: center;
         background-size: cover;
     }
@@ -24,7 +25,7 @@
         }
         .album-title{
             font-weight: bold;
-            font-size: 18px;
+            font-size: 15px;
         }
         .album-like-icon{
             margin-top: 10px;
@@ -32,4 +33,9 @@
             font-size: 30px;
         }
     }
+}
+.album:hover{
+    transform: scale(1.04);
+    box-shadow: 3px 5px 5px 1px #bbb;
+    cursor: pointer;
 }

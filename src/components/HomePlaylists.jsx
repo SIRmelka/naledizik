@@ -18,8 +18,7 @@ const HomePlaylists = () => {
             })
         },[]
     )
-       
-    console.log(playlists);
+    
 
     return (
         <div className='playlists'>
