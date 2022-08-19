@@ -9,7 +9,7 @@ const MusicTile = () => {
                     Désolé
                 </p>
                 <p className='artist'>
-                    Sexion d'assaut
+                    Sexion dassaut
                 </p>
            </div>
            <div className='right'>

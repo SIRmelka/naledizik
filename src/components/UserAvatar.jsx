@@ -1,15 +1,16 @@
 import React from 'react';
 import {IoMdArrowDropdown} from 'react-icons/io'
 
-const UserAvatar = () => {
+const UserAvatar = ({picture,username}) => {
+
     return (
         <div className='avatar'>
             <span className='circle-avatar'>
                 <div className='avatar-picture'
-                style={{backgroundImage:"url(https://kda.mo.cloudinary.net/img/malkia-kabamba.jpg)"}}
+                style={{backgroundImage:`url(${picture})`}}
                 ></div>
             </span>
-            <span><p>Root M.</p></span>
+            <span><p>{username}</p></span>
             <span className='drawer'>
                 <IoMdArrowDropdown/>
             </span>

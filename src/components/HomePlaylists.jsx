@@ -1,7 +1,21 @@
 import React from 'react';
+// import { useEffect } from 'react';
+import { useContext } from 'react';
+import UserContext from '../context';
 import Playlist from './Playlist';
 
 const HomePlaylists = () => {
+
+    const {getData} = useContext(UserContext)
+
+    // useEffect(
+    //     getData.getFeaturedPlaylists()
+    //     .then((data)=>{
+    //         console.log(data);
+    //     })
+    // )
+
+    console.log(getData);
     return (
         <div className='playlists'>
                         <div className='playlists-header'>
