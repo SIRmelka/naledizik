@@ -5,13 +5,14 @@
     box-shadow: 3px 5px 5px 1px #eee;
     flex: 10%;
     transition: 0.3s;
+    
     .album-cover{
-
         min-height: 300px;
         min-width: 200px;
         background-position: center;
         background-size: cover;
     }
+
     .album-info{
         justify-content: space-between;
         display: flex;
