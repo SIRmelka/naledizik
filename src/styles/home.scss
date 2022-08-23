@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     height: 99vh;
-    overflow: auto;
+    overflow: hidden;
     background: #fafafa;
     .sidebar-section{
         // position: fixed;
@@ -14,8 +14,7 @@
         flex: 82%;
         height: 99%;
         justify-content: space-between;
-        // overflow: auto;
-        // border: 2px solid green;
+        overflow: auto;
     }
     .searchBar-section{
         display: flex;
@@ -34,6 +33,7 @@
         position: sticky;
         top:0;
         background-color: #fafafa;
+        z-index: 3;
     }
     .middle{
     }

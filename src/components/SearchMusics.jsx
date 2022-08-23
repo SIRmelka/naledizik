@@ -19,7 +19,7 @@ const SearchMusics = () => {
       }
     
     
-    const {getData,searchingTerm} = useContext(UserContext)
+    const {getData,searchingTerm,curentlyPlaying} = useContext(UserContext)
     
     const [tracks,setTracks] = useState([]);
 
@@ -48,11 +48,13 @@ const SearchMusics = () => {
                 tracks.map((track)=>{
                     return(
                         <MusicCard 
-                        key={track.id} 
+                        key={track.id}
+                        uri={track.uri}
                         artistName={track.artists[0].name}
                         trackName={track.name.substring(0,30)}
                         duration={timeConvert(track.duration_ms )}
-                        background={track.album.images[0].url}
+                        background={track.album.images[1].url}
+                        style={track.uri==curentlyPlaying?"music-card playing":" music-card notplaying"}
                         />
                     )
                 })

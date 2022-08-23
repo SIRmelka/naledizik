@@ -1,0 +1,53 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    // background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200105/pngtree-geometric-square-with-light-blue-background-image_326796.jpg");
+    background-size:cover ;
+
+    .login-main-section{
+        display: flex;
+        height:85%;
+        width: 80%;
+        background: #fff;
+        box-shadow: 5px 1px 5px 2px #ccc;
+        border-radius: 2px;
+        .login-connexion-section{
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 30%;
+            background-position:left;
+            // background: url("https://flevix.com/wp-content/uploads/2019/07/Music-Preloader-1.gif");
+            .login-btn{
+                
+                border: none;
+                padding: 2em;
+                background: $primary;
+                color:#fff;
+                font-weight: bold;
+                border-radius: 5px;
+                margin: 0em 0;
+                transition:0.5s;
+                
+            }.login-btn:hover{
+                    cursor: pointer;
+                    background: #fff;
+                    color: $primary;
+                    border: 1px solid $primary;
+                }
+
+        }
+        .login-images-section{
+            flex: 50%;
+            background:url("https://www.icegif.com/wp-content/uploads/2022/01/icegif-209.gif");
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+}

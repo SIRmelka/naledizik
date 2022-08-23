@@ -20,7 +20,7 @@ const timeConvert = (number) =>{
   }
 
 const PlayingPlaylist = () => {
-  const { getData, playingPlaylist } = useContext(UserContext);
+  const { getData, playingPlaylist,setCurentlyPlaying } = useContext(UserContext);
 
   const [musics, setMusics] = useState([]);
   const [playlist, setPlaylist] = useState([]);
@@ -33,10 +33,6 @@ const PlayingPlaylist = () => {
     });
   }, []);
 
- console.log(playingPlaylist);
-
-  console.log("he", musics);
-  console.log("get it", playlist);
 
   return (
     <div className="playing-playlist">
@@ -56,7 +52,7 @@ const PlayingPlaylist = () => {
             </span>
             </div>
             <div className="right">
-            <span>
+            <span onClick={()=>alert(setCurentlyPlaying(playlist.uri))}>
               <FiPlayCircle/>
             </span>
             <span>

@@ -7,6 +7,7 @@ import ThemeToggler from './ThemeToggler';
 import { Link } from 'react-router-dom';
 
 const SideBar = () => {
+
     return (
         <div className='side-bar'>
             <div className='logo'>

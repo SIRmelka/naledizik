@@ -67,22 +67,25 @@
             cursor: pointer;
             background: #f8f8f8;
             transform: scale(1.01);
-             .image{
-            animation: diskturn 10s infinite linear;
-
-            @keyframes diskturn {
-                from{
-                    transform: rotate(0deg);
-                }
-                to{
-                    transform: rotate(360deg);
-                }
-                
-            }
-        }
+            
         }
        
 
     }
    
+}
+.playing{
+    .image{
+        animation: diskturn 10s infinite linear;
+
+        @keyframes diskturn {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+    }
 }

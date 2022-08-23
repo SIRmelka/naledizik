@@ -9,15 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  a{
-    color:#222;
-    text-decoration: none;
-    transition: 0.2s;
-  }
-  a:hover{
-    transform: scale(0.9);
-    color:$primary
-  }
+
   .player{
     position: fixed;
     bottom: 0;

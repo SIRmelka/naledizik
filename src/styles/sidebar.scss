@@ -8,6 +8,16 @@
     margin: 5px 1px;
     padding: 0 4em;
 
+    a{
+        color:#222;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+      a:hover{
+        transform: scale(0.9);
+        color:$primary
+      }
+
     .menu,.settings{
       ul{
         margin: 0;
