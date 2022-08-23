@@ -28,7 +28,7 @@ const SideBar = () => {
                         <span className="nav-element">Search</span>
                     </li></Link>
 
-                    <Link to={"./playlists"}>
+                    <Link to={"./playlist"}>
                    <li>
                         <span className='nav-icon'><TbPlaylist/></span>
                         <span className="nav-element">Playlists</span>

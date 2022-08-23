@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import UserContext from '../context';
-import MusicTile from './MusicTile';
+import MusicCard from './MusicCard';
 
-const HomeMusics = () => {
+const SearchMusics = () => {
 
     const timeConvert = (number) =>{
 
@@ -17,37 +17,42 @@ const HomeMusics = () => {
         return chaine
       
       }
-
+    
+    
+    const {getData,searchingTerm} = useContext(UserContext)
+    
     const [tracks,setTracks] = useState([]);
 
 
-    const {getData} = useContext(UserContext)
+   
 
     useEffect(()=>{
 
-        getData.getMyTopTracks({limit:10})
-        .then(data => setTracks(data.items))
+        getData.searchTracks(searchingTerm,{limit:6})
+        .then(data => setTracks(data.tracks.items))
 
-    },[]
+    },[searchingTerm]
 
     )
+
+    console.log(tracks);
+
     return (
-        <div className="home-music">
-           <div className='home-music-header'>
-                <h1>you may also like</h1>
+        <div className="search-music">
+           <div className='search-music-header'>
+                <h1>Musiques <span className='results'> 21 results</span></h1>
            </div>
-           <div className='home-music-body'>
+           <div className='search-music-body'>
 
             {
                 tracks.map((track)=>{
                     return(
-                        <MusicTile 
-                        key={track.id}
-                        uri = {track.uri}
-                        background={track.album.images[0].url}
+                        <MusicCard 
+                        key={track.id} 
                         artistName={track.artists[0].name}
-                        trackName={track.name}
+                        trackName={track.name.substring(0,30)}
                         duration={timeConvert(track.duration_ms )}
+                        background={track.album.images[0].url}
                         />
                     )
                 })
@@ -58,4 +63,4 @@ const HomeMusics = () => {
     );
 };
 
-export default HomeMusics;
+export default SearchMusics;

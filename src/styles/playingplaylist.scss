@@ -1,0 +1,43 @@
+.playing-playlist{
+   
+    .playlist-banner{
+        border-radius: 20px 20px 0 0;
+        box-shadow: 1px 1px 5px 4px #eee;
+        height: 18rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-size: cover;
+        background-position: center;
+        left: 0;
+        .bottom{
+            background-color: rgba($color: $primary, $alpha: 0.7);;
+            color:#fff;
+            display: flex;
+            flex: 100%;
+            padding: 0.6em 1em;
+            justify-content: space-between;
+            align-items: center;
+    
+      
+            
+            h1{
+                font-size: 23px;
+            }
+            p,h1{
+                margin: 0;
+            }
+            .right{
+                font-size: 30px;
+            }
+            span{
+                margin: 0 5px;
+            }
+            span:hover{
+                cursor: pointer;
+            }
+
+        }
+    }
+}

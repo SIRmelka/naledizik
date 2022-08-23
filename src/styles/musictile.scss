@@ -1,9 +1,19 @@
 .music-tile{
     display: flex;
     justify-content: space-between;
-    padding: 15px 1em;
+    padding: 10px 1em;
     background: white;
-    margin:1em 0 ;
+    margin:15px 0 ;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #eee;
+    align-items: center;
+    .pic{
+        height:50px;
+        width:55px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+    }
     .left{
         padding: 2px 10px;
         flex: 90%;
@@ -16,13 +26,27 @@
     }
     .right{
         display: flex;
-        align-self:center ;
+        align-items:center ;
         justify-content: space-around;
         flex: 10%;
 
         .icon{
-            font-size: 37px;
-            margin-top: 3px
+            font-size: 30px;
+            margin-top: 3px;
+            transition: 0.2s;
+            
         }
+        
     };
+}
+.music-tile:hover{
+    cursor:pointer;
+    .right{
+         .icon{
+        color:$primary;
+     
+        
+    }
+    }
+   
 }

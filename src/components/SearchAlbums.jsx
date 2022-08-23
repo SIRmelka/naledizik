@@ -4,24 +4,25 @@ import { useContext } from 'react';
 import UserContext from '../context';
 import Album from './Album';
 
-const HomeAlbums = () => {
+const SearchAlbums = () => {
 
-    const {getData} = useContext(UserContext);
+    const {getData,searchingTerm} = useContext(UserContext);
 
     const [albums,setAlbums] = useState([]);
 
     useEffect(()=>{
-        getData.getNewReleases({limit:6})
+        getData.searchAlbums(searchingTerm,{limit:3})
         .then(data => setAlbums(data.albums.items))
-    },[])
-
+    },[searchingTerm])
 
     return (
         <div className='albums'>
-           <div className='albums-header'>
-                <h1>Albums</h1>
+
+            <div className='albums-header'>
+                <h1>Albums <span className='results'>12 results</span></h1>
                 <p>see more</p>
             </div>
+
             <div className='albums-body'>
                 {
                     albums.map((album)=>{
@@ -34,4 +35,4 @@ const HomeAlbums = () => {
     );
 };
 
-export default HomeAlbums;
+export default SearchAlbums;
