@@ -8,10 +8,15 @@
     transition: 0.3s;
 
     .album-cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         min-height: 301px;
         min-width: 200px;
         background-position: center;
         background-size: cover;
+        color:#888;
     }
 
     .album-info{
@@ -49,4 +54,26 @@
 }
 .results{
     font-weight:normal;
+}
+.album-add{
+    margin: 10px 10px;
+    background: #fff;
+    padding: 10px;
+    // box-shadow: 3px 5px 5px 1px #eee;
+    flex: 10%;
+    width: 35%;
+    transition: 0.3s;
+    cursor: pointer;
+
+    .album-cover-add{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 301px;
+        min-width: 200px;
+        background-position: center;
+        background-size: cover;
+        color:#888;
+    }
 }
