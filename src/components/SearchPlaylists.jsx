@@ -31,7 +31,7 @@ const SearchPlaylists = () => {
                                playlists?
                                
                                playlists.map((playlist)=>{
-                                  
+                                   
                                      return(   <Playlist
                                             playlistName={playlist.name}
                                             tracksNumber={11}
