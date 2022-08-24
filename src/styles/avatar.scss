@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     margin: 5px 0;
+    cursor: pointer;
     .circle-avatar{
         height: 40px;
         width: 40px;
@@ -24,4 +25,31 @@
     span{
         font-size: 20px;
     }
+}
+
+.deconnexion{
+    width: 150px;
+    background: #fafafa;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    animation: loger 0.4s;
+    height: 60px;
+    box-shadow: 1px 1px 4px 1px #999;
+    cursor: pointer;
+}
+@keyframes loger {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+    
+}
+.hidden{
+    display: none;
 }

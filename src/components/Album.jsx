@@ -8,7 +8,7 @@ const Album = ({albumName,artist,background}) => {
             >
             </div>
             <div className='album-info'>
-                <span>
+                <span className='album-about-left'>
                     <p className="album-title">{albumName}</p>
                     <p className="album-artist">{artist}</p>
                 </span>

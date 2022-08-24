@@ -26,7 +26,7 @@ const SearchAlbums = () => {
             <div className='albums-body'>
                 {
                     albums.map((album)=>{
-                        return <Album key={album.id} albumName={album.name} artist={album.artists[0].name} background={album.images[0].url}/>
+                        return <Album key={album.id} albumName={album.name} artist={album.artists[0].name} background={album.images&&album.images[0].url}/>
                     })
                 }
                 

@@ -53,7 +53,7 @@ const SearchMusics = () => {
                         artistName={track.artists[0].name}
                         trackName={track.name.substring(0,30)}
                         duration={timeConvert(track.duration_ms )}
-                        background={track.album.images[1].url}
+                        background={track.album.images&&track.album.images[1].url}
                         style={track.uri==curentlyPlaying?"music-card playing":" music-card notplaying"}
                         />
                     )

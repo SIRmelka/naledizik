@@ -21,9 +21,9 @@ const Playlist = ({playlistName,tracksNumber,background,changePlaylist}) => {
                         {tracksNumber} morceaux
                     </span>
                 </span>
-                <span className='play-icon'>
+                <div className='play-icon'>
                     <FiPlay/>
-                </span>
+                </div>
             </div>
         </div>
         

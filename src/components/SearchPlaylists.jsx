@@ -35,7 +35,7 @@ const SearchPlaylists = () => {
                                      return(   <Playlist
                                             playlistName={playlist.name}
                                             tracksNumber={11}
-                                            background={playlist.images[0].url}
+                                            background={playlist.images.length!==0&&playlist.images[0].url}
                                             key={playlist.id}
                                         />)
                                 }):"sd"

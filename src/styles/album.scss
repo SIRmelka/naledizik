@@ -4,8 +4,9 @@
     padding: 10px;
     box-shadow: 3px 5px 5px 1px #eee;
     flex: 10%;
+    width: 35%;
     transition: 0.3s;
-    
+
     .album-cover{
         min-height: 301px;
         min-width: 200px;
@@ -14,21 +15,27 @@
     }
 
     .album-info{
-        justify-content: space-between;
         display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+      
         align-items: center;
         min-height: 30px;
-        width: 250px;
         padding:5px 5px;
 
         p{
             margin: 0;
         }
+        .album-about-left{
+
+        }
         .album-title{
             font-weight: bold;
             font-size: 15px;
+            
         }
         .album-like-icon{
+            align-self: flex-end;
             margin-top: 10px;
             color:$secondary;
             font-size: 30px;
