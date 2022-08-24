@@ -6,7 +6,7 @@ import { useState } from 'react';
 const Login = () => {
     
     const CLIENT_ID = "705a7b670ab9408488ca35198bc4b379";
-    const REDIRECT_UTI = "https://naledizik.vercel.app/git";
+    const REDIRECT_UTI = "https://naledizik.vercel.app/";
     // const REDIRECT_UTI = "http://localhost:3000/login";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
