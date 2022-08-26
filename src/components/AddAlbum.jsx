@@ -1,9 +1,10 @@
 import React from 'react';
+import { RiAddCircleLine } from 'react-icons/ri';
 const AddAlbum = () => {
     return (
         <div className="album-add">
             <div className='album-cover-add'>
-                <img src='https://www.picng.com/upload/plus/png_plus_52165.png'></img>
+                <span><RiAddCircleLine/></span>
                 <h4>Add a new Album</h4>
             </div>
             

@@ -1,5 +1,6 @@
 .middle{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
     padding: 0 10px;
@@ -25,4 +26,26 @@
             }
         }
     }
+    //tablet
+    @media (max-width:1300px) {
+        .playlists{
+            margin: 1em 0;
+            justify-content: space-between;
+        }
+        .playlist{
+            // display: none;
+            height: 10em;
+
+        }
+    }
+    //mini tablet
+    @media (max-width:955px) {
+        .playlists{
+            margin: 0em 5px !important ;
+        }
+    }   
     
+    @media (max-width:600px) {
+        .playlist{
+        margin:1em 5px;}
+    }

@@ -10,7 +10,7 @@ const UserAvatar = ({picture,username}) => {
                 style={{backgroundImage:`url(${picture})`}}
                 ></div>
             </span>
-            <span><p>{username}</p></span>
+            <span><p className='username'>{username}</p></span>
             <span className='drawer'>
                 <IoMdArrowDropdown/>
             </span>

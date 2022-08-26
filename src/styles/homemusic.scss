@@ -8,3 +8,31 @@
         }
     }
 }
+    //tablet
+    @media (max-width:1300px) {
+        .home-music{
+            margin: 0 10px;
+
+            .music-tile{
+            
+                .right{
+                    // border: 2px solid red;
+                    p{
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    //mini tablet
+    @media (max-width:955px) {
+
+    }   
+    
+    @media (max-width:600px) {
+        .music-tile{
+            .pic{
+                display: none;
+            }
+        }
+    }

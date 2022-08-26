@@ -1,12 +1,19 @@
-.side-bar{
+.bottom-bar{
     background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    li{
+        display: block;
+        font-size: 23px;
+    }
     // border: 2px solid red;
-    margin: 5px 1px;
-    padding: 0 4em;
 
     a{
         color:#222;
@@ -33,7 +40,7 @@
         li{
             margin: 0;
             padding: 0;
-            display: block;
+        
 
             .nav-icon{
             

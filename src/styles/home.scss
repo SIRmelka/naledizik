@@ -39,3 +39,102 @@
     }
     
 }
+
+    //tablet
+    @media (max-width:1300px) {
+
+    }
+    //mini tablet
+    @media (max-width:955px) {
+        .player{
+            border: 1px solid red;
+            width: 99%;
+            min-height:10% ;
+            background: #fafafa;
+        }
+        .top{
+            justify-content: space-between !important;
+            // border: 2px solid red;
+
+                .searchBar-section{
+                    display: flex;
+                    justify-content: center;
+                    flex: 80%;
+                    align-items: center;
+                
+                .searchBar{
+
+                    border-radius: 5px;
+                    margin: 0 0;
+                    padding: 5px;
+                    max-height: 25px;
+                    input{
+                        width: 20em;
+                        
+                    }
+                
+                
+                }
+            }
+       
+        }
+    }   
+    
+    @media (max-width:600px) {
+        .top{
+           
+            width: 98% !important;
+            // background-color: red !important;
+        }
+        .avatar-section{
+            flex: 10%;
+        }
+      .avatar{
+        .username{
+            display: none;
+        }
+      }
+      .searchBar{
+        margin: 0 1px;
+      }
+    }
+    @media (max-width:400px) {
+
+        .searchBar-section{
+            height: 60px;
+            width: 100px !important;
+            justify-content: center;
+            .searchBar{
+                // display: none !important;
+                width: 90%;
+                margin: 0 3em;
+                border: 1px solid $primary;
+
+            }
+            input{
+                margin: 0;
+            }
+        }
+
+        .top{
+            position: absolute !important;
+        
+     
+        }
+        .avatar-section{
+            display: none !important;
+        }
+      .avatar{
+        display: none !important;
+        p{
+            
+        }
+      }
+    }
+    .search-music{
+        margin: 0 0 !important;
+     }
+    .search-music-body{
+       margin: 0 0 !important;
+    }
+    

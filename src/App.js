@@ -12,6 +12,7 @@ import Playlists from "./pages/Playlists";
 import UserContext from "./context";
 import SpotifyWebPlayer from "react-spotify-web-playback/lib";
 import PlayingPlaylist from "./pages/PlayingPlaylist";
+import BottomBar from "./components/BottomBar";
 
 function App() {
   const [userId, setUserId] = useState("");
@@ -38,6 +39,7 @@ function App() {
     setUserName(data.display_name);
   });
 
+  
   return (
     <UserContext.Provider
       value={{
@@ -88,6 +90,10 @@ function App() {
               }}
             />
           </div>
+          <div className="bottom-bar">
+              <BottomBar/>
+          </div>
+          
         </div>
       </div>
     </UserContext.Provider>

@@ -17,3 +17,28 @@
         
         
 }
+ //tablet
+ @media (max-width:1300px) {
+    .albums{
+        margin: 0 10px;
+    }
+}
+//mini tablet
+@media (max-width:955px) {
+    .albums-body{
+        flex-direction: column !important;
+        align-items: center;
+
+        .album{
+            width: 90%;
+        }
+    }
+    
+
+}   
+
+@media (max-width:600px) {
+    .album{
+        flex: 100%;
+    }
+}

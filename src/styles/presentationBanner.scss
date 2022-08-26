@@ -51,4 +51,57 @@
         flex-wrap: wrap;
         flex: 35%;
     }
+
+   
+}
+
+//tablette
+@media (max-width:1300px) {
+    .presentation-banner{
+        flex-direction: column;
+        height: 27em;
+        .banner{
+            flex:100%;
+            height: 350px;
+        }
+        .artists
+        {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 11em;
+        margin-top: 5px;
+        }
+           
+    }
+}
+//mini tablet
+@media (max-width:955px) {
+    .presentation-banner{
+        margin: 0 0;
+        height: 30em;
+        .artists
+        {
+       
+        grid-template-rows: 12em;
+        margin-top: 10px;
+       
+        }
+           
+    }
+}
+
+@media (max-width:600px) {
+    .presentation-banner{
+       
+        height: 40em;
+        .artists
+        {
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 5px;
+        }
+        .artiste{
+            height: 10em;
+        }
+           
+    }
 }
