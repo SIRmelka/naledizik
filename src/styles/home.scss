@@ -47,9 +47,9 @@
     //mini tablet
     @media (max-width:955px) {
         .player{
-            border: 1px solid red;
+
             width: 99%;
-            min-height:10% ;
+            min-height:7% ;
             background: #fafafa;
         }
         .top{
@@ -106,14 +106,15 @@
             justify-content: center;
             .searchBar{
                 // display: none !important;
-                width: 90%;
-                margin: 0 3em;
+                width: 70%;
+                margin: 0 1em;
                 border: 1px solid $primary;
+                input{
+                    width: 16em !important;
 
+                }
             }
-            input{
-                margin: 0;
-            }
+           
         }
 
         .top{
@@ -122,10 +123,15 @@
      
         }
         .avatar-section{
-            display: none !important;
+            display: block;
+            position: absolute;
+            right: 10px;
         }
       .avatar{
-        display: none !important;
+        // display: none !important;
+    .avatar-picture{
+        display: none;
+    }
         p{
             
         }

@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: space-around;
     height: 100vh;
-    // background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200105/pngtree-geometric-square-with-light-blue-background-image_326796.jpg");
     background-size:cover ;
 
     .login-main-section{
@@ -50,4 +49,21 @@
         }
     }
 
+}
+@media (max-width:600px) {
+
+}
+@media (max-width:400px) {
+
+    .login-main-section{
+        margin-top: 5em;
+        height: 50% !important;
+        box-shadow: 2px 1px 5px 2px #ccc !important;
+    }
+    .login-connexion-section{
+
+    }
+    .login-images-section{
+        display: none;
+    }
 }
