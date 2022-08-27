@@ -10,11 +10,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .player{
-    position: fixed;
-    bottom: 7%;
-    background: #fff;
-    width: 75%;
+
+  .bottom-bar{
+    display: none;
   }
   
 

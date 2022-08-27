@@ -39,6 +39,12 @@
     }
     
 }
+.player{
+    position: fixed;
+    bottom: 2px;
+    background: #fff;
+    width: 100%;
+  }
 
     //tablet
     @media (max-width:1300px) {
@@ -47,10 +53,13 @@
     //mini tablet
     @media (max-width:955px) {
         .player{
-
+            bottom: 7%;
             width: 99%;
             min-height:7% ;
             background: #fafafa;
+        }
+        .bottom-bar{
+            display: block;
         }
         .top{
             justify-content: space-between !important;
