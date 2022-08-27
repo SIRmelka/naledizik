@@ -19,7 +19,7 @@ const SearchAlbums = () => {
         <div className='albums'>
 
             <div className='albums-header'>
-                <h1>Albums <span className='results'>12 results</span></h1>
+                <h1>Albums <span className='results'></span></h1>
                 <p>see more</p>
             </div>
 

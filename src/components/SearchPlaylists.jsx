@@ -23,7 +23,7 @@ const SearchPlaylists = () => {
     return (
         <div className='playlists'>
                         <div className='playlists-header'>
-                            <span><h1>Playlists<span className='results'> 12 Results</span></h1></span>
+                            <span><h1>Playlists<span className='results'></span></h1></span>
                             <span><p>see more</p></span>
                         </div>
                         <div className='playlists-body'>

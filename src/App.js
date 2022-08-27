@@ -85,8 +85,8 @@ function App() {
                 color: "#333",
                 loaderColor: "#1B75BB",
                 sliderColor: "#1B75BB",
-                trackArtistColor: "#ccc",
-                trackNameColor: "#fff",
+                trackArtistColor: "#333",
+                trackNameColor: "#000",
               }}
             />
           </div>

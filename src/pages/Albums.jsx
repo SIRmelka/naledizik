@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
-import AddAlbum from '../components/AddAlbum';
 import Album from '../components/Album';
 import HomeAlbums from '../components/HomeAlbums';
 import UserContext from '../context';
@@ -31,7 +30,7 @@ const Albums = () => {
             } )
            
             
-            :""}<AddAlbum/></div>
+            :""}</div>
 
           
             <HomeAlbums/>
