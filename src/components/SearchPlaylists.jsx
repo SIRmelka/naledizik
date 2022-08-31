@@ -2,14 +2,22 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext} from 'react';
+import { useNavigate } from 'react-router-dom';
 import UserContext from '../context';
 import Playlist from './Playlist';
 
 const SearchPlaylists = () => {
 
-    const {getData,searchingTerm} = useContext(UserContext)
+    const {getData,searchingTerm,setPlayingPlaylist} = useContext(UserContext)
     const [playlists,setPlaylists] = useState([])
+    const navigate = useNavigate()
 
+    function changePlaylist(id)
+    
+    {
+        setPlayingPlaylist(id)
+        navigate("./playlist",{replace:true})
+    }
 
     useEffect(()=>{
             getData.searchPlaylists(searchingTerm,{limit:4})
@@ -34,6 +42,7 @@ const SearchPlaylists = () => {
                                    
                                      return(   <Playlist
                                             playlistName={playlist.name}
+                                            changePlaylist={()=>changePlaylist(playlist.id)}
                                             tracksNumber={11}
                                             background={playlist.images.length!==0&&playlist.images[0].url}
                                             key={playlist.id}

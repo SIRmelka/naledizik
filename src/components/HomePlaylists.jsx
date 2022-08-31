@@ -11,7 +11,7 @@ const HomePlaylists = () => {
     const {getData,setPlayingPlaylist} = useContext(UserContext)
     const [playlists,setPlaylists] = useState([])
     const navigate = useNavigate()
-
+    
     function changePlaylist(id)
     
     {

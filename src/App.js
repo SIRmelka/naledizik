@@ -13,6 +13,7 @@ import UserContext from "./context";
 import SpotifyWebPlayer from "react-spotify-web-playback/lib";
 import PlayingPlaylist from "./pages/PlayingPlaylist";
 import BottomBar from "./components/BottomBar";
+import Loader from "./components/Loader";
 
 function App() {
   const [userId, setUserId] = useState("");
@@ -24,12 +25,14 @@ function App() {
   );
   const [curentlyPlaying, setCurentlyPlaying] = useState("");
   const [play, setPlay] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setPlay(true);
   }, [curentlyPlaying]);
 
   const getData = new SpotifyWebApi();
+  console.log(loading);
 
   getData.setAccessToken(localStorage.getItem("token"));
 
@@ -39,7 +42,6 @@ function App() {
     setUserName(data.display_name);
   });
 
-  
   return (
     <UserContext.Provider
       value={{
@@ -53,9 +55,12 @@ function App() {
         setPlayingPlaylist,
         curentlyPlaying,
         setCurentlyPlaying,
+        loading,
+        setLoading,
       }}
     >
       <div className="home">
+        <Loader show={loading}/>
         <div className="sidebar-section">
           <SideBar />
         </div>
@@ -63,16 +68,19 @@ function App() {
         <div className="content-section">
           <Header />
 
-          <div className="middle">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/albums" element={<Albums />} />
-              <Route path="/playlists" element={<Playlists />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/playlist" element={<PlayingPlaylist />} />
-            </Routes>
-          </div>
+            
+
+            <div className="middle">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/albums" element={<Albums />} />
+                <Route path="/playlists" element={<Playlists />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/playlist" element={<PlayingPlaylist />} />
+              </Routes>
+            </div>
+
           <div className="player">
             <SpotifyWebPlayer
               uris={[curentlyPlaying]}
@@ -91,9 +99,8 @@ function App() {
             />
           </div>
           <div className="bottom-bar">
-              <BottomBar/>
+            <BottomBar />
           </div>
-          
         </div>
       </div>
     </UserContext.Provider>
