@@ -1,0 +1,81 @@
+.artist-banner{
+    // border:2px solid red;
+    margin: 10px 0;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    background: #fff;
+    .about{
+        display: flex;
+        flex-direction: column;
+        flex: 40%;
+        background-image: radial-gradient(circle at 0% 0%, #74caf9 0, #74caf9 50%, #74caf9 100%);
+        margin: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+        .profile{
+            margin: 3em 0;
+            height: 200px;
+            width: 200px;
+            border-radius:50% ;
+            background-position: center;
+            background-size: cover;
+        }
+        .identities{
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            background: rgba($color: $primary, $alpha: 0.8);
+            color:#fff;
+            .icon{
+                font-size: 40px;
+                color:#fff;
+                cursor:pointer;
+            }
+        }
+    }
+
+    .popular-songs{
+        padding: 10px 0;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        flex: 60%;
+        justify-content: space-between;
+        .toper{
+            text-align: left !important ;
+            flex: 10%;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 1px 1px 1px #ddd;
+        }
+        .content{
+            flex: 90%;
+            overflow: auto;
+            scrollbar-width: 1px;
+        }
+        .content::-webkit-scrollbar {
+            background-image: radial-gradient(circle at 0% 0%, #74caf9 0, #74caf9 50%, #74caf9 100%);
+            color:wheat;
+            width: 5px;
+          }
+    }
+    padding: 1em 0;
+
+}
+.artist-albums{
+    margin: 2em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (max-width:600px) {
+
+    .artist-banner{
+        flex-direction:column;
+    }
+}

@@ -40,6 +40,7 @@ const PresentationBanner = () => {
         {topArtists.map((artist) => {
           return (
             <Artiste
+              id={artist.id}
               key={artist.id}
               name={artist.name}
               image={artist.images[0].url}

@@ -14,6 +14,7 @@ import SpotifyWebPlayer from "react-spotify-web-playback/lib";
 import PlayingPlaylist from "./pages/PlayingPlaylist";
 import BottomBar from "./components/BottomBar";
 import Loader from "./components/Loader";
+import Artist from "./pages/Artist";
 
 function App() {
   const [userId, setUserId] = useState("");
@@ -23,6 +24,9 @@ function App() {
   const [playingPlaylist, setPlayingPlaylist] = useState(
     "37i9dQZF1DWZg863fGtALu"
   );
+  const [selectedArtist,setSelectedArtist] = useState('')
+  const [selectedAlbum,setSelectedAlbum] = useState('')
+
   const [curentlyPlaying, setCurentlyPlaying] = useState("");
   const [play, setPlay] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -57,6 +61,8 @@ function App() {
         setCurentlyPlaying,
         loading,
         setLoading,
+        selectedAlbum,setSelectedAlbum,
+        selectedArtist,setSelectedArtist
       }}
     >
       <div className="home">
@@ -78,6 +84,7 @@ function App() {
                 <Route path="/playlists" element={<Playlists />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/playlist" element={<PlayingPlaylist />} />
+                <Route path="/artist" element={<Artist/>} />
               </Routes>
             </div>
 

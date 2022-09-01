@@ -11,7 +11,8 @@ const HomePlaylists = () => {
     const {getData,setPlayingPlaylist} = useContext(UserContext)
     const [playlists,setPlaylists] = useState([])
     const navigate = useNavigate()
-    
+    const [isloading,setIsLoading] = useState(true)
+
     function changePlaylist(id)
     
     {
@@ -24,10 +25,12 @@ const HomePlaylists = () => {
             getData.getFeaturedPlaylists({limit:8})
             .then((data)=>{
                 setPlaylists(data.playlists.items);
+                setIsLoading(false)
             })
         },[]
     )
         console.log(playlists);
+        console.log(isloading);
     return (
         <div className='playlists'>
                         <div className='playlists-header'>
@@ -36,20 +39,20 @@ const HomePlaylists = () => {
                         </div>
                         <div className='playlists-body'>
                             {
-                               playlists?
+                               !isloading?
                                playlists.map((playlist)=>{
                                 
                                      return(  
-                                        
+                                        playlist&&
                                         <Playlist 
                                             key={1}
                                             changePlaylist={()=>changePlaylist(playlist.id)}
-                                            playlistName={playlist.name}
+                                            playlistNameMplaylistName={playlist.name}
                                             tracksNumber={11}
                                             background={playlist.images[0].url}
                                            
                                         />)
-                                }):"sd"
+                                }):"is loading"
                             }
                             
                         </div>
