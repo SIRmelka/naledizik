@@ -12,20 +12,23 @@ const Artist = () => {
     const {getData,selectedArtist,setCurentlyPlaying} = useContext(UserContext)
     const [topSongs,setTopSongs] = useState([])
     const [artist,setArtist] = useState([])
+    const [albums,setAlbums] = useState([])
     const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
 
         setTimeout(()=>{
           getData.getArtistTopTracks(selectedArtist,"CD",{limit:5})
-        .then(data => {
-            setTopSongs(data.tracks)
-            setLoading(false)
-        }
-        )  
+            .then(data => {
+                setTopSongs(data.tracks)
+                setLoading(false)
+            }
+            )
+            
+            getData.getArtistAlbums(selectedArtist,{limit:6})
+            .then( data => setAlbums(data.items))
         },500)
-        
-        
+
 
     },[selectedArtist])
 
@@ -34,14 +37,11 @@ const Artist = () => {
         .then(data=>setArtist(data))
     },[selectedArtist])
     
-    console.log(artist);
-    console.log(topSongs);
+    console.log(albums);
 
     function playartist(uri){
         setCurentlyPlaying(uri)
     }
-
-    console.log(artist);
     return (
         !loading?
         <div>
@@ -72,7 +72,16 @@ const Artist = () => {
                 </div>
             </div>
             <div className='artist-albums'>
-                <Album/><Album/><Album/><Album/>
+                {
+                    albums.map((album)=>{
+                        return <Album 
+                        key={album.id}
+                        albumName={album.name}
+                        artist={album.release_date.substring(0,4)}
+                        background={album.images[1].url}
+                        />
+                    })
+                }
             </div>  
         </div>:"is loading"
     );
