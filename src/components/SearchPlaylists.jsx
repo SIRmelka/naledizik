@@ -16,7 +16,7 @@ const SearchPlaylists = () => {
     
     {
         setPlayingPlaylist(id)
-        navigate("./playlist",{replace:true})
+        navigate("../playlist",{replace:true})
     }
 
     useEffect(()=>{

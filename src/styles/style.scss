@@ -8,6 +8,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
   }
 
 
@@ -97,4 +98,22 @@ body {
       }
     }
 
-  
+    .hidde{
+      animation: hidenflou 1s;
+      position: absolute;
+      top:0;
+      opacity: 0;
+    }
+    @keyframes hidenflou {
+      0%{
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      90%{
+        opacity: 0;
+        transform: scale(5);
+       
+      }
+    }

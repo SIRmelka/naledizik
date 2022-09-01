@@ -71,7 +71,9 @@ const Artist = () => {
                     </div>
                 </div>
             </div>
+            <h2 className='albums-title'>Albums de <span>{artist.name}</span></h2>
             <div className='artist-albums'>
+                
                 {
                     albums.map((album)=>{
                         return <Album 

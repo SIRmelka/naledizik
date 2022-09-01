@@ -15,6 +15,23 @@
         height: 99%;
         justify-content: space-between;
         overflow: auto;
+        
+    }
+    .content-section::-webkit-scrollbar {
+        width: 10px;
+        margin: 5px;
+    
+    }
+    .content-section::-webkit-scrollbar-thumb {
+    
+        background: #777;
+        border-radius: 30px;
+        
+    }
+    .content-section::-webkit-scrollbar-track {
+    
+        background: #eee;
+        
     }
     .searchBar-section{
         display: flex;

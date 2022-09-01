@@ -73,6 +73,14 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+.albums-title{
+    
+    background: #fff;
+    padding: 1em 1em;
+    span{
+        font-weight: normal;
+    }
+}
 @media (max-width:600px) {
 
     .artist-banner{

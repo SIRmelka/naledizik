@@ -29,7 +29,7 @@ function App() {
 
   const [curentlyPlaying, setCurentlyPlaying] = useState("");
   const [play, setPlay] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setPlay(true);
