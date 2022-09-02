@@ -28,7 +28,6 @@ const PlayingPlaylist = () => {
   useEffect(() => {
     getData.getPlaylist(playingPlaylist).then((data) => {
       setMusics(data.tracks.items);
-      console.log("log", data);
       setPlaylist(data);
     });
   }, []);
@@ -52,7 +51,7 @@ const PlayingPlaylist = () => {
             </span>
             </div>
             <div className="right">
-            <span onClick={()=>alert(setCurentlyPlaying(playlist.uri))}>
+            <span onClick={()=>setCurentlyPlaying(playlist.uri)}>
               <FiPlayCircle/>
             </span>
             <span>

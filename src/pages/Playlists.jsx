@@ -31,9 +31,6 @@ const Playlists = () => {
         .then(data=>setPlaylists(data.playlists.items))
     },[])
 
-    console.log("fav",favoritePlaylist);
-    console.log("all",playlists);
-
     return (
         <div>
             <h2>Your Playlists</h2>
@@ -44,7 +41,7 @@ const Playlists = () => {
                     return <Playlist 
                     key={playlist.id} 
                     playlistName={playlist.name}
-                    background={playlist.images[1].url}
+                    background={playlist.images?playlist.images[1].url:""}
                     tracksNumber={playlist.tracks.total}
                     changePlaylist={()=>changePlaylist(playlist.id)}
                     />

@@ -70,7 +70,7 @@
     //mini tablet
     @media (max-width:955px) {
         .player{
-            bottom: 6.5%;
+            bottom: 9%;
             width: 99%;
             min-height:7% ;
             background: #fafafa;
@@ -112,6 +112,7 @@
             width: 98% !important;
             // background-color: red !important;
         }
+        
         .avatar-section{
             flex: 10%;
         }
@@ -125,7 +126,9 @@
       }
     }
     @media (max-width:400px) {
-
+        .content-section{
+            height: 85% !important;
+        }
         .searchBar-section{
             height: 60px;
             width: 100px !important;
@@ -134,9 +137,9 @@
                 // display: none !important;
                 width: 70%;
                 margin: 0 1em;
-                border: 1px solid $primary;
                 input{
                     width: 16em !important;
+                    color:#777 !important;
 
                 }
             }
@@ -154,13 +157,11 @@
             right: 10px;
         }
       .avatar{
-        // display: none !important;
+        display: none !important;
     .avatar-picture{
         display: none;
     }
-        p{
-            
-        }
+      
       }
     }
     .search-music{
