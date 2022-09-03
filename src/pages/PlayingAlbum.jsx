@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect ,useState} from 'react';
 import { useContext } from 'react';
+import { AiFillHeart } from 'react-icons/ai';
 import { FiHeart, FiShuffle } from 'react-icons/fi';
 import MiniLoader from '../components/MiniLoader';
 import MusicTile from '../components/MusicTile';
@@ -12,6 +13,17 @@ const PlayingAlbum = () => {
     const[loader,setLoader] = useState(true)
     const [album,setAlbum] = useState([])
     const [tracks,setTracks] = useState([])
+    const [isLiked,setIsLiked] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(false)
+
+    function like()
+    {
+        setIsLiked(!isLiked)
+    }
+    function play()
+    {
+        setIsPlaying(true)
+    }
 
     const timeConvert = (number) =>{
 
@@ -61,7 +73,7 @@ const PlayingAlbum = () => {
                     </p>
                 </div>
                 <div className='additionals'>
-                    <FiHeart/>
+                   <span onClick={()=>like()}>{!isLiked?<FiHeart/>:<AiFillHeart/>}</span> 
                 </div>
 
             </div>
@@ -71,7 +83,10 @@ const PlayingAlbum = () => {
         }
         <div className='toper-tracks'>
              <h3>Tracks</h3>
-             <span onClick={()=>setCurentlyPlaying(album.uri)}><FiShuffle/></span>
+             <span onClick={()=>{
+                setCurentlyPlaying(album.uri)
+                play()
+                }}>{!isPlaying?<FiShuffle/>:<span className='playing'><img src="assets/sound.gif"></img></span>}</span>
         </div>
         <div className='album-tracks'>
             
