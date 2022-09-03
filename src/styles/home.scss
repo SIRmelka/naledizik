@@ -49,7 +49,7 @@
         justify-content: space-around;
         position: sticky;
         top:0;
-        background-color: #fafafa;
+        background-color: #fff;
         z-index: 3;
     }
     .middle{
@@ -70,7 +70,7 @@
     //mini tablet
     @media (max-width:955px) {
         .player{
-            bottom: 9%;
+            bottom: 10%;
             width: 99%;
             min-height:7% ;
             background: #fafafa;

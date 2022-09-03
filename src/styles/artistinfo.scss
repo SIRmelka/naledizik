@@ -46,12 +46,13 @@
         flex-direction: column;
         flex: 60%;
         justify-content: space-between;
+        font-size: 14px;
         .toper{
-            text-align: left !important ;
+            text-align: center !important ;
+            border:1px solid #fafafa;
             flex: 10%;
             font-weight: bold;
             font-size: 25px;
-            box-shadow: 1px 1px 1px #ddd;
         }
         .content{
             flex: 90%;
@@ -61,7 +62,7 @@
         .content::-webkit-scrollbar {
             background-image: radial-gradient(circle at 0% 0%, #74caf9 0, #74caf9 50%, #74caf9 100%);
             color:wheat;
-            width: 5px;
+            width: none;
           }
     }
     padding: 1em 0;

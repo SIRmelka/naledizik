@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../context';
+import MiniLoader from './MiniLoader';
 import Playlist from './Playlist';
 
 const HomePlaylists = () => {
@@ -47,12 +48,12 @@ const HomePlaylists = () => {
                                         <Playlist 
                                             key={1}
                                             changePlaylist={()=>changePlaylist(playlist.id)}
-                                            playlistNameMplaylistName={playlist.name}
-                                            tracksNumber={11}
+                                            playlistName={playlist.name}
+                                            tracksNumber={playlist.tracks.total}
                                             background={playlist.images[0].url}
                                            
                                         />)
-                                }):"is loading"
+                                }):<MiniLoader/>
                             }
                             
                         </div>

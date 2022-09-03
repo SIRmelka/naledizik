@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { FiPlayCircle } from "react-icons/fi";
 import { RiHeart3Line } from "react-icons/ri";
+import MiniLoader from "../components/MiniLoader";
 import MusicTile from "../components/MusicTile";
 import UserContext from "../context";
 
@@ -24,17 +25,23 @@ const PlayingPlaylist = () => {
 
   const [musics, setMusics] = useState([]);
   const [playlist, setPlaylist] = useState([]);
+  const [loading,setLoading] = useState(true)
 
   useEffect(() => {
     getData.getPlaylist(playingPlaylist).then((data) => {
       setMusics(data.tracks.items);
       setPlaylist(data);
+      setLoading(false)
     });
   }, []);
 
 
   return (
+    <>
+    {
+      !loading?
     <div className="playing-playlist">
+      
         <div
         className="playlist-banner"
         style={{
@@ -60,11 +67,13 @@ const PlayingPlaylist = () => {
             </div>
         </div>
       </div>
+
       <div className="playlist-elements">
-        {musics.map((music) => {
+        {
+        musics.map((music) => {
           return (
           
-          <MusicTile  uri={music.track.uri} key={music.track.uri} trackName={music.track.name}
+          <MusicTile  uri={music.track.uri?music.track.uri:""} key={music.track.uri} trackName={music.track.name}
           background={music.track.album.images[0].url}
           duration={timeConvert(music.track.duration_ms)}
           />
@@ -72,7 +81,7 @@ const PlayingPlaylist = () => {
           );
         })}
       </div>
-    </div>
+    </div>:<MiniLoader/>}</>
   );
 };
 

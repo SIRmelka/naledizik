@@ -1,0 +1,41 @@
+.playing-album{
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    backdrop-filter: blur(15px);
+    .about-album{
+        background-color: rgba($color: #fff, $alpha: 0.95);
+        flex: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+        .artist-avatar{
+            border:3px solid #fff;
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        .info{
+            text-align: center;
+            .album-title{
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+        .additionals{
+            font-size: 30px;
+            color:$secondary
+        }
+    }
+   
+} .toper-tracks{
+        justify-content: space-between;
+        padding: 0 3em 0 1em;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }

@@ -28,7 +28,7 @@ const Header = () => {
       <div className="avatar-section" onClick={click}>
         <UserAvatar username={userName} picture={profilePicture}/>
           <div className={clickDisconectBtn?"deconnexion":"hidden"} onClick={disconnect}>
-            <span><p><FiLogOut/> log out</p></span>
+            <span><p><FiLogOut className="log-out"/> log out</p></span>
           </div>
       </div>
     </div>

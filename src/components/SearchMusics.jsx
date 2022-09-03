@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import UserContext from '../context';
+import MiniLoader from './MiniLoader';
 import MusicCard from './MusicCard';
 
 const SearchMusics = () => {
@@ -22,14 +23,19 @@ const SearchMusics = () => {
     const {getData,searchingTerm,curentlyPlaying} = useContext(UserContext)
     
     const [tracks,setTracks] = useState([]);
-
+    const [loading,setLoading] = useState(true)
 
    
 
     useEffect(()=>{
-
-        getData.searchTracks(searchingTerm,{limit:6})
-        .then(data => setTracks(data.tracks.items))
+        setLoading(true)
+   
+             getData.searchTracks(searchingTerm,{limit:6})
+        .then((data) => {
+            setLoading(false)
+            setTracks(data.tracks.items)
+        })
+    
 
     },[searchingTerm]
 
@@ -45,6 +51,7 @@ const SearchMusics = () => {
            <div className='search-music-body'>
 
             {
+                !loading?
                 tracks.map((track)=>{
                     return(
                         <MusicCard 
@@ -57,7 +64,7 @@ const SearchMusics = () => {
                         style={track.uri==curentlyPlaying?"music-card playing":" music-card notplaying"}
                         />
                     )
-                })
+                }):<MiniLoader/>
             }
                
             </div>

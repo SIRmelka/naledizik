@@ -15,6 +15,7 @@ import PlayingPlaylist from "./pages/PlayingPlaylist";
 import BottomBar from "./components/BottomBar";
 import Loader from "./components/Loader";
 import Artist from "./pages/Artist";
+import PlayingAlbum from "./pages/PlayingAlbum";
 
 function App() {
   const [userId, setUserId] = useState("");
@@ -24,12 +25,13 @@ function App() {
   const [playingPlaylist, setPlayingPlaylist] = useState(
     "37i9dQZF1DWZg863fGtALu"
   );
+  const [playingAlbum,setPlayingAlbum] = useState("6b8P3pIe2bH7AO9EQOQwk9")
   const [selectedArtist,setSelectedArtist] = useState('')
   const [selectedAlbum,setSelectedAlbum] = useState('')
 
   const [curentlyPlaying, setCurentlyPlaying] = useState("");
   const [play, setPlay] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setPlay(true);
@@ -62,7 +64,8 @@ function App() {
         loading,
         setLoading,
         selectedAlbum,setSelectedAlbum,
-        selectedArtist,setSelectedArtist
+        selectedArtist,setSelectedArtist,
+        playingAlbum,setPlayingAlbum
       }}
     >
       <div className="home">
@@ -84,6 +87,7 @@ function App() {
                 <Route path="/playlists" element={<Playlists />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/playlist" element={<PlayingPlaylist />} />
+                <Route path="/album" element={<PlayingAlbum/>} />
                 <Route path="/artist" element={<Artist/>} />
               </Routes>
             </div>

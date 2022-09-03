@@ -15,7 +15,9 @@ body {
   .bottom-bar{
     display: none;
   }
-  
+  .see-more{
+    cursor: pointer;
+  }
   .loader{
     display: flex;
     position: absolute;

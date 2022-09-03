@@ -61,7 +61,7 @@ const SideBar = () => {
                     <li>
                         <span className='nav-element'>Dark mode</span>
                         <span className='toggler'><ThemeToggler/></span></li>
-                    <li><span><img src="./assets/french.svg" alt="flag"></img></span></li>
+                    {/* <li><span><img src="./assets/french.svg" alt="flag"></img></span></li> */}
                 </ul>
             </div>
 

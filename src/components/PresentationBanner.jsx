@@ -5,9 +5,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import UserContext from "../context";
+import MiniLoader from "./MiniLoader";
 
 const PresentationBanner = () => {
-  const { getData, loading, setLoading } = useContext(UserContext);
+  const { getData, loading,setLoading } = useContext(UserContext);
+  const [loader,setLoader] = useState(true)
 
   const [topArtists, setTopArtists] = useState([]);
 
@@ -15,7 +17,8 @@ const PresentationBanner = () => {
     const data = getData.getMyTopArtists({ limit: 4 });
     data
       .then((data) => setTopArtists(data.items))
-      .then(() => setLoading(false));
+      .then(() => setLoader(false))
+      .then(()=>setLoading(false))
   }, []);
 
   console.log(loading);
@@ -37,7 +40,9 @@ const PresentationBanner = () => {
         </div>
       </div>
       <div className="artists">
-        {topArtists.map((artist) => {
+        {
+        !loader?
+        topArtists.map((artist) => {
           return (
             <Artiste
               id={artist.id}
@@ -46,7 +51,8 @@ const PresentationBanner = () => {
               image={artist.images[0].url}
             />
           );
-        })}
+        }):<MiniLoader/>
+        }
       </div>
     </div>
   );

@@ -4,24 +4,27 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import { GoPlay } from 'react-icons/go';
 import Album from '../components/Album';
+import MiniLoader from '../components/MiniLoader';
 import MusicTile from '../components/MusicTile';
 import UserContext from '../context';
 
 const Artist = () => {
 
-    const {getData,selectedArtist,setCurentlyPlaying} = useContext(UserContext)
+
+    const {getData,selectedArtist,setCurentlyPlaying,setLoading} = useContext(UserContext)
     const [topSongs,setTopSongs] = useState([])
     const [artist,setArtist] = useState([])
     const [albums,setAlbums] = useState([])
-    const [loading,setLoading] = useState(true)
+    const [loading,setLoader] = useState(true)
 
+    setLoading(false)
     useEffect(()=>{
 
         setTimeout(()=>{
           getData.getArtistTopTracks(selectedArtist,"CD",{limit:5})
             .then(data => {
                 setTopSongs(data.tracks)
-                setLoading(false)
+                setLoader(false)
             }
             )
             
@@ -85,7 +88,7 @@ const Artist = () => {
                     })
                 }
             </div>  
-        </div>:"is loading"
+        </div>:<MiniLoader/>
     );
 };
 
