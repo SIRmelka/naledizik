@@ -6,8 +6,8 @@ import { useState } from 'react';
 const Login = () => {
     
     const CLIENT_ID = "705a7b670ab9408488ca35198bc4b379";
-    const REDIRECT_UTI = "https://naledizik.vercel.app/";
-    // const REDIRECT_UTI = "http://localhost:3000/login";
+    // const REDIRECT_UTI = "https://naledizik.vercel.app/";
+    const REDIRECT_UTI = process.env.REACT_APP_REDIRECT_URI;
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
     const SCOPE = "streaming user-follow-read playlist-read-private user-read-private user-read-email user-read-playback-state user-top-read user-library-modify user-library-read user-read-currently-playing playlist-read-private user-read-recently-played  user-modify-playback-state";
@@ -64,3 +64,4 @@ const Login = () => {
 };
 
 export default Login;
+
