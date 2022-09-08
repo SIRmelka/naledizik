@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
+import { FiPause } from 'react-icons/fi';
 import { GoPlay } from 'react-icons/go';
 import Album from '../components/Album';
 import MiniLoader from '../components/MiniLoader';
@@ -16,6 +17,7 @@ const Artist = () => {
     const [artist,setArtist] = useState([])
     const [albums,setAlbums] = useState([])
     const [loading,setLoader] = useState(true)
+    const [playing,setPlaying] = useState(false)
 
     setLoading(false)
     useEffect(()=>{
@@ -40,10 +42,11 @@ const Artist = () => {
         .then(data=>setArtist(data))
     },[selectedArtist])
     
-    console.log(albums);
+
 
     function playartist(uri){
         setCurentlyPlaying(uri)
+        setPlaying(!playing)
     }
     return (
         !loading?
@@ -54,7 +57,9 @@ const Artist = () => {
                     </div>
                     <div className='identities'>
                     <h1>{topSongs.length>0&&topSongs[0].artists[0].name}</h1>
-                    <GoPlay onClick={()=>playartist(topSongs[0].artists[0].uri)} className='icon'/>
+                    <span onClick={()=>playartist(topSongs[0].artists[0].uri)}>
+                    {!playing?<GoPlay  className='icon'/>:<FiPause className='icon'/>}
+                    </span>
                     </div>
                 </div>
                 <div className='popular-songs'>

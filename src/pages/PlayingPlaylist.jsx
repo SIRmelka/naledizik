@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
-import { FiPlayCircle } from "react-icons/fi";
+import { FiPauseCircle, FiPlayCircle } from "react-icons/fi";
 import { RiHeart3Line } from "react-icons/ri";
 import MiniLoader from "../components/MiniLoader";
 import MusicTile from "../components/MusicTile";
@@ -26,6 +26,7 @@ const PlayingPlaylist = () => {
   const [musics, setMusics] = useState([]);
   const [playlist, setPlaylist] = useState([]);
   const [loading,setLoading] = useState(true)
+  const [playing,setPlaying] = useState(false)
 
   useEffect(() => {
     getData.getPlaylist(playingPlaylist).then((data) => {
@@ -58,8 +59,12 @@ const PlayingPlaylist = () => {
             </span>
             </div>
             <div className="right">
-            <span onClick={()=>setCurentlyPlaying(playlist.uri)}>
-              <FiPlayCircle/>
+            <span onClick={()=>{
+              setCurentlyPlaying(playlist.uri)
+              setPlaying(!playing)
+                }
+              }>
+              {!playing?<FiPlayCircle/>:<FiPauseCircle/>}
             </span>
             <span>
                 <RiHeart3Line />

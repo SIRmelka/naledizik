@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Run the project on local after cloning
+
+**This project is using environement variables**
+
+to run it on local, you have to create a .env.local file in the root of your project.
+make sure to create a variable named **REACT_APP_REDIRECT_URI** wich will contain the value "http://localhost:3000/login"
+
+**Note** Make sure that your server is running on port 3000, else u won't be able to access the app
